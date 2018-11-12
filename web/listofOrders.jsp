@@ -1,7 +1,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="apartmentpackage.ListingBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% ArrayList<ListingBean> ar20 = (ArrayList<ListingBean>)request.getAttribute("GodOne"); %>
+<% ArrayList<ListingBean> ar2 = (ArrayList<ListingBean>)request.getAttribute("LordOne"); %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,42 +15,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-        function validate()
+            function func1()
             {
-                var yes2 = document.formi[0][1].value;
-                
-                var yes = document.formi[0][0].value;
-                console.log(yes);
-                if(yes2!="Request")
-                {
-                    alert("Request Already Approved");
-                    return false;
-                }
-                else{
-                 if (yes == "No")
-                {
-                    alert("There are currently no requests for this Apartment");
-                    return false;
-                }
-                else
-                {
-                    alert("Request Approved");
-                }
-            }
-            }            
-        function func()
-            {
-                    var yes3 = document.formi10[1][0].value;
-            
-                if (yes3 === "No")
-                {
-                    alert("There are currently no requests for this Apartment");
-                    return false;
-                }
-                else{
-                    alert(" Request Cancelled");
-                    return true;
-                }
+                alert("Request cancelled");
             }
       </script>
   <style>
@@ -134,36 +101,30 @@
     </div>
   </div>
 </nav>
-    <center><h3 class="rainbow"> My Apartment(s).</h3></center>
+        
+    <center><h3 class="rainbow"> My Order(s).</h3></center>
     <hr class="colorgraph">
-      <%  if(!ar20.isEmpty()){
-          for(int i=0;i<ar20.size();i++)
+    <br>
+      <%  if(!ar2.isEmpty()){
+          for(int i=0;i<ar2.size();i++)
       { %>
       <div style="height:300px;" id="lol">
-       <a href=<%= ar20.get(i).getImgLink()%> target="_blank" >
-           <img src=<%= ar20.get(i).getImgLink()%> width="300" height="300" style="float:left;margin:0 20px 20px 0;"> </a>
-      <p style="color:#9C27B0;">Email :<%= ar20.get(i).getUserEmail()%></p>
-      <p style="color:#9C27B0;">State :<%= ar20.get(i).getState()%></p>
-      <p style="color:#9C27B0;">Address :<%= ar20.get(i).getAddress()%></p>
-      <p style="color:#9C27B0;">Bedrooms :<%= ar20.get(i).getBedrooms()%></p>
-      <p style="color:#9C27B0;">Requested By :<%= ar20.get(i).getRequestedBy()%></p>
-      <div class="row">
-          <!----> 
-          <form method="post" name="formi" action="ApproveRequest" onsubmit="return validate()">
-          <input type="hidden" name="APi" value=<%=ar20.get(i).getRequestedBy()%> >
-          <input type="hidden" name="APi2" value=<%=ar20.get(i).getRequestStatus()%> >
-          <input type="hidden" name="APD" value=<%=ar20.get(i).getApId()%> >
-          <button type="submit" class="btn btn-success">Approve Request</button>
-      <!--<input type="submit" value="Approve Request">--></form>
-      <form method="post" name="formi10" action="RejectRequest" onsubmit="return func()">
-          <input type="hidden" name="APi3" value=<%=ar20.get(i).getRequestedBy()%> >
-          <input type="hidden" name="lol" value=<%=ar20.get(i).getApId()%> >
-          <button type="submit" class="btn btn-danger" >Reject Request</button>
-          <!-- <input type="submit" value="Reject Request">--></form></div>
+       <a href=<%= ar2.get(i).getImgLink()%> target="_blank" >
+           <img src=<%= ar2.get(i).getImgLink()%> width="300" height="300" style="float:left;margin:0 20px 20px 0;"> </a>
+      <p style="color:#9C27B0;">Email :<%= ar2.get(i).getUserEmail()%></p>
+      <p style="color:#9C27B0;">State :<%= ar2.get(i).getState()%></p>
+      <p style="color:#9C27B0;">Address :<%= ar2.get(i).getAddress()%></p>
+      <p style="color:#9C27B0;">Bedrooms :<%= ar2.get(i).getBedrooms()%></p>
+      <p style="color:#9C27B0;">Requested status :<%= ar2.get(i).getRequestStatus()%></p>
+      <form method="post" action="CancelRequest" onsubmit="func1()">
+          <input type="hidden" name="APD" value=<%=ar2.get(i).getApId()%> >
+                    <button type="submit" class="btn btn-danger">Cancel Request</button>
+      <!--<input type="submit" value="Cancel Request">--></form>
       </div>
       <hr class="colorgraph">
       <%}}%>
-      
-    <center><h3 class="rainbow"> You Have Reached The End of This Page.</h3></center>
+          <center><h3 class="rainbow">No More Orders, You Have Reached The End of This Section.</h3></center>
+          <hr class="colorgraph">
+          <br>
     </body>
 </html>

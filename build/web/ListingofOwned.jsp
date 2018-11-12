@@ -1,7 +1,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="apartmentpackage.ListingBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% ArrayList<ListingBean> ar2 = (ArrayList<ListingBean>)request.getAttribute("LordOne"); %>
 <% ArrayList<ListingBean> ar20 = (ArrayList<ListingBean>)request.getAttribute("GodOne"); %>
 <!DOCTYPE html>
 <html>
@@ -38,12 +37,7 @@
                     alert("Request Approved");
                 }
             }
-            }
-            function func1()
-            {
-                alert("Request cancelled");
-            }
-            
+            }            
         function func()
             {
                     var yes3 = document.formi10[1][0].value;
@@ -140,30 +134,7 @@
     </div>
   </div>
 </nav>
-        
-    <center><h3 class="rainbow"> My Order(s).</h3></center>
-    <hr class="colorgraph">
-      <%  if(!ar2.isEmpty()){
-          for(int i=0;i<ar2.size();i++)
-      { %>
-      <div style="height:300px;" id="lol">
-       <a href=<%= ar2.get(i).getImgLink()%> target="_blank" >
-           <img src=<%= ar2.get(i).getImgLink()%> width="300" height="300" style="float:left;margin:0 20px 20px 0;"> </a>
-      <p style="color:#9C27B0;">Email :<%= ar2.get(i).getUserEmail()%></p>
-      <p style="color:#9C27B0;">State :<%= ar2.get(i).getState()%></p>
-      <p style="color:#9C27B0;">Address :<%= ar2.get(i).getAddress()%></p>
-      <p style="color:#9C27B0;">Bedrooms :<%= ar2.get(i).getBedrooms()%></p>
-      <p style="color:#9C27B0;">Requested status :<%= ar2.get(i).getRequestStatus()%></p>
-      <form method="post" action="CancelRequest" onsubmit="func1()">
-          <input type="hidden" name="APD" value=<%=ar2.get(i).getApId()%> >
-                    <button type="submit" class="btn btn-danger">Cancel Request</button>
-      <!--<input type="submit" value="Cancel Request">--></form>
-      </div>
-      <hr class="colorgraph">
-      <%}}%>
-          <center><h3 class="rainbow"> You Have Reached The End of This Section.</h3></center>
-          <hr class="colorgraph">
-      <center><h3 class="rainbow"> My Apartment(s).</h3></center>
+    <center><h3 class="rainbow"> My Apartment(s).</h3></center>
     <hr class="colorgraph">
       <%  if(!ar20.isEmpty()){
           for(int i=0;i<ar20.size();i++)

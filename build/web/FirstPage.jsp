@@ -79,7 +79,9 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="userApart.jsp">Upload Apartment</a></li>
       <li>|</li>
-      <li class="active"><a href="MyOrders">Your Orders</a></li>
+      <li class="active"><a href="MyOrders">My Apartments</a></li>
+      <li>|</li>
+      <li class="active"><a href="ListOforderz">My Orders</a></li>
       <li>|</li>
       <li class="active"><a href="Fback">Feedback</a></li>
     </ul>
