@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/LogIn.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/AppartMentBean.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/InfoAdd.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/CancelRequest.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/SignUp.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/ListingofAparts.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/userApart.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/LoginServlet.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/BuyingRequest.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/SearchForAparts.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/RejectRequest.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/ApartmentDao.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/DBConnection.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/LogoutController.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/LoginBean.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/Feedback.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/Insertfeedback.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/RegisterBean.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/FirstPage.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/ApproveRequest.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/RegisterDao.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/AppartmentMain.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/Fback.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/MyOrders.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/FeedbackBean.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/ListingBean.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/ListingofOwned.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/loginDao.java</file>
+        </group>
+    </open-files>
+</project-private>
