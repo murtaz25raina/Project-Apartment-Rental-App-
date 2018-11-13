@@ -32,7 +32,8 @@ public class CancelRequest extends HttpServlet {
           int i = st22.executeUpdate();
           if(i!=0)
           {
-              response.sendRedirect("FirstPage.jsp");
+              request.getRequestDispatcher("/ListOforderz").include(request, response);
+              //response.sendRedirect("FirstPage.jsp");
           }
         }
         catch(IOException | ClassNotFoundException | SQLException e){

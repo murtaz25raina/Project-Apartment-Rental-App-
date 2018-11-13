@@ -30,7 +30,8 @@ public class BuyingRequest extends HttpServlet {
           int i = st2.executeUpdate();
           if(i!=0)
           {
-              response.sendRedirect("FirstPage.jsp");
+             request.getRequestDispatcher("/ListOforderz").forward(request, response);
+             // response.sendRedirect("FirstPage.jsp");
           }
         }
         catch(IOException | ClassNotFoundException | SQLException e){
