@@ -43,7 +43,8 @@ public class AppartmentMain extends HttpServlet {
         ApartmentDao Aa= new ApartmentDao();
         if(Aa.addApp(Ap))
         {
-          res.sendRedirect("FirstPage.jsp");
+         req.getRequestDispatcher("/MyOrders").include(req, res);
+          //res.sendRedirect("FirstPage.jsp");
         }
         else
         {

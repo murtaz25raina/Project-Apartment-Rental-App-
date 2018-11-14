@@ -31,7 +31,8 @@ public class RejectRequest extends HttpServlet {
           int i = st22.executeUpdate();
           if(i!=0)
           {
-              response.sendRedirect("FirstPage.jsp");
+              request.getRequestDispatcher("/MyOrders").forward(request, response);  
+          //    response.sendRedirect("FirstPage.jsp");
           }
         }
         catch(IOException | ClassNotFoundException | SQLException e){

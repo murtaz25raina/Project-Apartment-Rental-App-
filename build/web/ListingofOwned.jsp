@@ -15,11 +15,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-        function validate()
-            {
-                var yes2 = document.formi[0][1].value;
+        function validate(form)
+            { 
+                var yes2 = form.AP[1].value;
                 
-                var yes = document.formi[0][0].value;
+                var yes = form.AP[0].value;
                 console.log(yes);
                 if(yes2!="Request")
                 {
@@ -35,14 +35,15 @@
                 else
                 {
                     alert("Request Approved");
+                    return true;
                 }
             }
             }            
-        function func()
+        function functions(form)
             {
-                    var yes3 = document.formi10[1][0].value;
-            
-                if (yes3 === "No")
+                    var yes3 = form[0].value;
+            console.log(yes3);
+                if (yes3 == "No")
                 {
                     alert("There are currently no requests for this Apartment");
                     return false;
@@ -149,14 +150,14 @@
       <p style="color:#9C27B0;">Requested By :<%= ar20.get(i).getRequestedBy()%></p>
       <div class="row">
           <!----> 
-          <form method="post" name="formi" action="ApproveRequest" onsubmit="return validate()">
-          <input type="hidden" name="APi" value=<%=ar20.get(i).getRequestedBy()%> >
-          <input type="hidden" name="APi2" value=<%=ar20.get(i).getRequestStatus()%> >
+          <form method="post" name="formi" action="ApproveRequest" onsubmit="return validate(this)" >
+          <input type="hidden" name="AP" value=<%=ar20.get(i).getRequestedBy()%> >
+          <input type="hidden" name="AP" value=<%=ar20.get(i).getRequestStatus()%> >
           <input type="hidden" name="APD" value=<%=ar20.get(i).getApId()%> >
-          <button type="submit" class="btn btn-success">Approve Request</button>
-      <!--<input type="submit" value="Approve Request">--></form>
-      <form method="post" name="formi10" action="RejectRequest" onsubmit="return func()">
-          <input type="hidden" name="APi3" value=<%=ar20.get(i).getRequestedBy()%> >
+          <button type="submit" class="btn btn-success" >Approve Request</button>
+          <!--<input type="submit" value="Approve Request">--></form>
+      <form method="post" name="formi10" action="RejectRequest"  onsubmit="return functions(this)" >
+          <input type="hidden" name="APDS" value=<%=ar20.get(i).getRequestedBy()%> >
           <input type="hidden" name="lol" value=<%=ar20.get(i).getApId()%> >
           <button type="submit" class="btn btn-danger" >Reject Request</button>
           <!-- <input type="submit" value="Reject Request">--></form></div>

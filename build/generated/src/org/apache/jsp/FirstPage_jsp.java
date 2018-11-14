@@ -125,7 +125,7 @@ public final class FirstPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <li>|</li>\n");
       out.write("      <li class=\"active\"><a href=\"MyOrders\">My Apartments</a></li>\n");
       out.write("      <li>|</li>\n");
-      out.write("      <li class=\"active\"><a href=\"ListOforderz\">Your Orders</a></li>\n");
+      out.write("      <li class=\"active\"><a href=\"ListOforderz\">My Orders</a></li>\n");
       out.write("      <li>|</li>\n");
       out.write("      <li class=\"active\"><a href=\"Fback\">Feedback</a></li>\n");
       out.write("    </ul>\n");

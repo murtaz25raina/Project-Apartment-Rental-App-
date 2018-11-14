@@ -29,7 +29,8 @@ public class ApproveRequest extends HttpServlet {
           int i = st220.executeUpdate();
           if(i!=0)
           {
-              response.sendRedirect("FirstPage.jsp");
+           request.getRequestDispatcher("/MyOrders").forward(request, response);  
+           // response.sendRedirect("FirstPage.jsp");
           }
         }
         catch(IOException | ClassNotFoundException | SQLException e){

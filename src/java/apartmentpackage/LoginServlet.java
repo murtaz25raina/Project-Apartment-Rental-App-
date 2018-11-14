@@ -29,17 +29,13 @@ public class LoginServlet extends HttpServlet {
             //req.getRequestDispatcher("/FirstPage.jsp").forward(req, res);}
         else
         {
-            System.out.println("exists");
-            req.getRequestDispatcher("/LogIn.jsp").include(req, res);
-            PrintWriter out = res.getWriter();  
-             res.setContentType("text/html");  
-             out.println("<script type=\"text/javascript\">");  
-             out.println("function ABC(){alert('Email doesn't Exists');}");
-             out.println("ABC();");
-             out.println("</script>"); 
-             
+            PrintWriter out = res.getWriter();
+         
+                 out.println("<script type=\"text/javascript\">");
+                 out.println("alert('UserEmail or password incorrect');");
+                 out.println("location='LogIn.jsp';");
+                 out.println("</script>");
+                  //  req.getRequestDispatcher("/SignUp.jsp").include(req, res);
         }
-        
    }
-   
 }
