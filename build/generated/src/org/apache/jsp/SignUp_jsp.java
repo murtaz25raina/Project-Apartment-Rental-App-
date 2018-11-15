@@ -143,7 +143,7 @@ public final class SignUp_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<div class=\"row\" style=\"margin-top:20px\">\n");
       out.write("    <div class=\"col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3\">\n");
-      out.write("\t\t<form role=\"form\" name=\"form\" method=\"post\" action=\"InfoAdd\" onsubmit=\"return validate()\">\n");
+      out.write("\t\t<form role=\"form\" name=\"form\" method=\"post\" action=\"OtpServlet\" onsubmit=\"return validate()\">\n");
       out.write("\t\t\t<fieldset>\n");
       out.write("\t\t\t\t<h2>Please Sign In</h2>\n");
       out.write("\t\t\t\t<hr class=\"colorgraph\">\n");

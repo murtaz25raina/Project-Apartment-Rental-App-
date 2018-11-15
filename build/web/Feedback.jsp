@@ -74,15 +74,25 @@
       <div class="panel-heading">Email :<%= AR.get(j).getEmail20()%></div>
       <div class="panel-body">Feedback :<%= AR.get(j).getFeedback20()%></div>
     </div>
-      <br><% }%>
-        <form method="post" action="Insertfeedback" >
+      <% }%>
+        <form method="post" action="Insertfeedback" onsubmit="return validate(this)">
          <div class="md-form">
          <i class="fa fa-pencil prefix grey-text"></i>
          <label for="form107">Your Feedback</label>
-        <textarea name="cmnt" id="form107" class="md-textarea form-control" rows="5" ></textarea>
+        <textarea name="cmnt" id="form107" class="md-textarea form-control" rows="4"></textarea>
           </div>
       
             <button type="submit" class="btn btn-success">Post Feedback</button>
         </form>
+        <script>
+            function validate(form){
+                var regex = /(<([^>]+)>)/ig;
+                form[0].value = form[0].value.replace(regex, "");
+                if (form[0].value === "")
+                    return false;
+                else
+                    return true;
+            }
+        </script>
     </body>
 </html>

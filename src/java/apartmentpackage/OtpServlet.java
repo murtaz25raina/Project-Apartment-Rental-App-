@@ -1,10 +1,6 @@
 package apartmentpackage;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.Properties;
 import java.util.UUID;
 import javax.mail.Message;
@@ -21,27 +17,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "ApproveRequest", urlPatterns = {"/ApproveRequest"})
-public class ApproveRequest extends HttpServlet {
+@WebServlet(name = "OtpServlet", urlPatterns = {"/OtpServlet"})
+public class OtpServlet extends HttpServlet {
 
-    @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-          try{
-              HttpSession sessionbig = request.getSession();
-              String EmailOwn=(String) sessionbig.getAttribute("Email");
-            String email=request.getParameter("AP");
-           Connection N = DBConnection.getConnection();
-          String Idd01=request.getParameter("APD");
-          System.out.println(Idd01);
-          String query109="update Apdata set Requestdetail=(?) where ApId=(?)" ;
-          PreparedStatement st220 = N.prepareStatement(query109);
-          String abd="Approved";
-          st220.setString(1, abd);
-          st220.setString(2, Idd01);
-          int i = st220.executeUpdate();
-          if(i!=0)
-          {
+   @Override
+    public void service(HttpServletRequest req,HttpServletResponse res) throws IOException ,ServletException
+    {
+        String name = req.getParameter("Name");
+        String email = req.getParameter("email");
+        String password = req.getParameter("password");
+        String mobile = req.getParameter("phone");
+        String address = req.getParameter("address");  
         String msg="";
         final String user="myhomeotp@gmail.com";//change accordingly  
         final String pass="murtaz22";  
@@ -69,9 +55,10 @@ public class ApproveRequest extends HttpServlet {
         MimeMessage message = new MimeMessage(session);  
         message.setFrom(new InternetAddress(user));  
         message.addRecipient(Message.RecipientType.TO,new InternetAddress(email));  
-        message.setSubject("NOTIFICATION FROM MYHOME");  
-        msg="Your request for Apartment Has been Accepted by "+EmailOwn+", visit the Website and Check MYORDERS";  
-        message.setText(msg);
+        //message.setSubject(subject);  
+        msg=UUID.randomUUID().toString();
+        message.setText(msg);  
+   
         //3rd step)send message  
        Transport.send(message);  
   
@@ -80,13 +67,16 @@ public class ApproveRequest extends HttpServlet {
         catch (MessagingException e) {
             System.out.println(e);
        //throw new RuntimeException(e);  
-       } 
-           request.getRequestDispatcher("/MyOrders").forward(request, response);  
-           // response.sendRedirect("FirstPage.jsp");
-          }
-        }
-        catch(IOException | ClassNotFoundException | SQLException e){
-            e.printStackTrace();}
-    
+       }  
+        HttpSession session1 = req.getSession(true); // reuse existing
+        session1.setMaxInactiveInterval(3000); // 30 seconds
+	
+        session1.setAttribute("OTP", msg);
+        session1.setAttribute("NameT", name);
+        session1.setAttribute("EmailT", email);
+        session1.setAttribute("PasswordT", password);
+        session1.setAttribute("MobileT", mobile);
+        session1.setAttribute("AddressT", address);
+        req.getRequestDispatcher("/OtpPage.jsp").forward(req, res);
     }
 }

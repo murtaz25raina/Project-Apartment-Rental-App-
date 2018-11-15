@@ -17,9 +17,9 @@
   <script>
         function validate(form)
             { 
-                var yes2 = form.AP[1].value;
+                var yes2 = form[1].value;
                 
-                var yes = form.AP[0].value;
+                var yes = form[0].value;
                 console.log(yes);
                 if(yes2!="Request")
                 {
@@ -152,7 +152,7 @@
           <!----> 
           <form method="post" name="formi" action="ApproveRequest" onsubmit="return validate(this)" >
           <input type="hidden" name="AP" value=<%=ar20.get(i).getRequestedBy()%> >
-          <input type="hidden" name="AP" value=<%=ar20.get(i).getRequestStatus()%> >
+          <input type="hidden" name="AP1" value=<%=ar20.get(i).getRequestStatus()%> >
           <input type="hidden" name="APD" value=<%=ar20.get(i).getApId()%> >
           <button type="submit" class="btn btn-success" >Approve Request</button>
           <!--<input type="submit" value="Approve Request">--></form>

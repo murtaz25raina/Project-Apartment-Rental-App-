@@ -100,7 +100,7 @@
 
 <div class="row" style="margin-top:20px">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-		<form role="form" name="form" method="post" action="InfoAdd" onsubmit="return validate()">
+		<form role="form" name="form" method="post" action="OtpServlet" onsubmit="return validate()">
 			<fieldset>
 				<h2>Please Sign In</h2>
 				<hr class="colorgraph">

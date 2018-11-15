@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/LogIn.jsp</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/AppartMentBean.java</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/OtpPage.jsp</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/InfoAdd.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/CancelRequest.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/listofOrders.jsp</file>
@@ -20,6 +21,7 @@
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/LogoutController.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/LoginBean.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/Feedback.jsp</file>
+            <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/OtpServlet.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/Insertfeedback.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/src/java/apartmentpackage/RegisterBean.java</file>
             <file>file:/C:/Users/get%20it/Documents/NetBeansProjects/ProjectApartment/web/FirstPage.jsp</file>
