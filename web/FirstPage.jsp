@@ -128,7 +128,6 @@
   <p>availability, rent specials, and much more. After all, everyone deserves</p> 
   <p>a home they love <3 .</p></b>
 </div>
-
 </body>
 </html>
 

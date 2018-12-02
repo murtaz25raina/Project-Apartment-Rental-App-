@@ -1,49 +1,59 @@
 package apartmentpackage;
 
 public class RegisterBean {
-  String name;
-  String email;
-  String password;
-  String mobile;
-  String address;
-  void setName(String name)
-  {
-      this.name=name;
-  }
-  void setEmail(String email)
-  {
-      this.email=email;
-  }
-  void setPassword(String password)
-  {
-      this.password = password;
-  }
-  void setMobile(String mobile)
-  {
-      this.mobile=mobile;
-  }
-  void setAddress(String address)
-  {
-      this.address=address;
-  }
-  String getName()
-  {
-      return this.name;
-  }
-  String getEmail()
-  {
-      return this.email;
-  }
-  String getPassword()
-  {
-      return this.password;
-  }
-  String getMobile()
-  {
-      return this.mobile;
-  }
-  String getAddress()
-  {
-      return this.address;
-  }
+  String Name;
+  String Email;
+  String Password;
+  String Mobile;
+  String Address;
+  int Id;
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    public String getMobile() {
+        return Mobile;
+    }
+
+    public void setMobile(String Mobile) {
+        this.Mobile = Mobile;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
 }

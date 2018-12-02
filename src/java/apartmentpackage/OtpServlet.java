@@ -57,6 +57,7 @@ public class OtpServlet extends HttpServlet {
         message.addRecipient(Message.RecipientType.TO,new InternetAddress(email));  
         //message.setSubject(subject);  
         msg=UUID.randomUUID().toString();
+        msg=msg.substring(0, 8);
         message.setText(msg);  
    
         //3rd step)send message  

@@ -113,6 +113,7 @@
       <p style="color:#9C27B0;">Bedrooms :<%= ar.get(i).getBedrooms()%></p>
       <form method="post" action="BuyingRequest" onsubmit="funct()">
       <input type="hidden" name="APD" value=<%=ar.get(i).getApId()%> >
+      <input type="hidden" name="AP20" value=<%= ar.get(i).getUserEmail()%> >
       <button type="submit" class="btn btn-success">Request Apartment</button>
       <!--<input type="submit" value="Request Appartment">--></form>
       </div>

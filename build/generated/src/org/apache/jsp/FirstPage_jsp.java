@@ -174,7 +174,6 @@ public final class FirstPage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  <p>availability, rent specials, and much more. After all, everyone deserves</p> \n");
       out.write("  <p>a home they love <3 .</p></b>\n");
       out.write("</div>\n");
-      out.write("\n");
       out.write("</body>\n");
       out.write("</html>\n");
       out.write("\n");

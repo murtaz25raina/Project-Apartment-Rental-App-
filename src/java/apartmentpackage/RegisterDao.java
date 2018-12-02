@@ -1,5 +1,9 @@
 package apartmentpackage;
 import java.sql.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 public class RegisterDao {
 
  public String getRegistered(RegisterBean RR)
@@ -20,19 +24,46 @@ public class RegisterDao {
          if(f.next()){
         conn.close();
           return "Exists";}
-         String query="insert into Signup2019 values(?,?,?,?,?)";
+        /* String query="insert into Signup2019 values(?,?,?,?,?)";
          PreparedStatement pS = conn.prepareStatement(query);
          pS.setString(1, Name10);
          pS.setString(2, Email10);
          pS.setString(3, Password10);
          pS.setString(4, Mobile10);
          pS.setString(5, Address10);
-         int i= pS.executeUpdate();
+         int i= pS.executeUpdate();*/
+         String query2="select max(Id) from SignUp2019;";
+          Statement s=conn.createStatement();
+          ResultSet RS=s.executeQuery(query2);
+          if(RS.next()){
+          int iiid=RS.getInt("max(Id)");
+          System.out.println(iiid);
          conn.close();
-         if(i!=0)
-             return "true";
-         else
-             return "false";
+         RegisterBean RBS = new RegisterBean();
+          RBS.setName(Name10);
+          RBS.setEmail(Email10);
+          RBS.setPassword(Password10);
+          RBS.setMobile(Mobile10);
+          RBS.setAddress(Address10);
+          iiid+=1;
+              System.out.println("ID="+iiid);
+          RBS.setId(iiid);
+        Configuration cf = new Configuration();
+        cf.configure("hibernate.cfg.xml");
+        SessionFactory sf = cf.buildSessionFactory();
+        Session sss = sf.openSession();
+        Transaction tx = sss.beginTransaction();
+        sss.save(RBS);
+        tx.commit();
+        sss.close();
+        sf.close();
+
+         
+         
+        // if(i!=0)
+             return "true";}
+        // else
+          //   return "false";
      }
      catch(Exception e)
      {
